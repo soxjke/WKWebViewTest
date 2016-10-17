@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL:) - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="WKWebView fails to load images and CSS using loadHTMLString(_, baseURL:)">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="Apple&#39;s recommendation:
+  In apps that run in iOS 8 and later, use the WKWebView class instead of using UIWebView.
+Thus, I have replaced my good old UIWebView with a shiny new WKWebView. But what I ">
+    <meta property="og:url" content="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl">
+    <link rel="canonical" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl">
+
+    
+    
+    <script type="text/javascript" async="" src="./ados"></script><script async="" src="./quant.js"></script><script async="" src="./beacon.js"></script><script async="" src="./analytics.js"></script><script type="text/javascript" async="" src="./ados.js"></script><script src="./jquery.min.js"></script>
+    <script src="./stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;WKWebView fails to load images and CSS using loadHTMLString(_, baseURL:)&#39;" href="http://stackoverflow.com/feeds/question/39901982">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({hasOpenBounty:true,showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:39901982});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '39901982');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1476690558,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"96505634ad313a65ec7b9c19f35a51e4","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"simplified_signup_form":{"v":"alternative_signup_message","g":1}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"ba88994ac4fe","js/moderator.en.js":"62a892958d5d","js/full-anon.en.js":"a9b3c60ea234","js/full.en.js":"d09df86f61e9","js/wmd.en.js":"7bb6a6bef9f9","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"f25761525234","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"3c9b516d7fa4","js/inline-tag-editing.en.js":"2ddfa79492e7","js/revisions.en.js":"47de10a8358f","js/review.en.js":"d7500ab09bf8","js/tagsuggestions.en.js":"2a9fc67ea337","js/post-validation.en.js":"ec004ee4030f","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"658c52ecb92c","js/keyboard-shortcuts.en.js":"c4fc51b44f85","js/external-editor.en.js":"235e80f649d7","js/external-editor.en.js":"235e80f649d7","js/snippet-javascript.en.js":"a03d5a1bd85d","js/snippet-javascript-codemirror.en.js":"00c4ce87dfab"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./full-anon.en.js"></script><script async="" src="./snippet-javascript.en.js"></script><script async="" src="./post-validation.en.js"></script><script async="" src="./prettify-full.en.js"></script><script async="" src="./external-editor.en.js"></script><script type="text/javascript" src="./adFeedback.js"></script><link rel="stylesheet" href="./adFeedback.css"><link type="text/css" rel="stylesheet" href="./jobs-multi.min.css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f39901982%2fwkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+        </div>
+
+        <div class="network-items">
+                <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 161 Stack Exchange sites">
+                    <span class="hidden-text">Stack Exchange</span>
+                </a>
+
+    <a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f39901982%2fwkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl" class="login-link">log in</a>
+
+                            <a href="http://stackoverflow.com/tour">tour</a>
+        <a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" class="icon-help js-help-button" title="Help Center and other resources">
+            help
+            <span class="triangle"></span>
+        </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+                                            </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                            <li class="youarehere">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="js-gps-track" data-gps-track="top_nav.click({is_current:true, location:3, destination:1})">
+        Questions
+        </a>
+    </li>
+
+    <li>
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:6})">
+        Jobs
+        </a>
+    </li>
+                            <li>
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:7})">
+        Documentation
+        </a>
+    </li>
+                            <li>
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:2})">
+        Tags
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-users" href="http://stackoverflow.com/users" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:3})">
+        Users
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-badges" href="http://stackoverflow.com/help/badges" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:4})">
+        Badges
+        </a>
+    </li>
+
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+    <div id="herobox" class="alternate">
+        <div class="test"></div>
+            <div id="close">
+                <a title="click to minimize"><span>x</span> Dismiss</a>
+            </div>
+        <div class="content">
+            <b>Join the Stack Overflow Community</b>
+            <div class="separator"></div>
+            <div class="blurb">
+                Stack Overflow is a community of 4.7 million programmers, just like you, helping each other.
+                    <br>
+Join them; it only takes a minute:                    <br>
+            </div>
+            <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f39901982%2fwkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl" id="tell-me-more" class="button">Sign up</a>
+        </div>
+    </div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl" class="question-hyperlink">WKWebView fails to load images and CSS using loadHTMLString(_, baseURL:)</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="39901982" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk912224287",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk912224287"><a href="http://engine.adzerk.net/r?e=eyJhdiI6MTE0MjY1LCJhdCI6NCwiYnQiOjAsImNtIjo0OTA0NDcsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNzA4Mzg1LCJkaSI6ImZiNjNkYzY4MGJhNDQ4ZTU5ZDUwNjMxOTdmYWM0OTJiIiwiZG0iOjEsImZjIjoyMDMwMDYyLCJmbCI6MjQ0NTgxNiwiaXAiOiIxODUuMTIxLjExNi4yIiwia3ciOiJpb3MsY3NzLHN3aWZ0LGltYWdlLHdrd2VidmlldyIsIm1rIjoic3dpZnQiLCJudyI6MjIsInBjIjoxMS41LCJlYyI6MTEuNSwicHIiOjc2NSwicnQiOjIsInN0Ijo4Mjc3LCJ1ayI6InVlMS0zZGQwNWMwNjk3Yjk0ZTBmYTg2MjQzMTcxY2FmODAxYiIsInpuIjo0MywidHMiOjE0NzY2OTA1NTk4NjMsImJmIjp0cnVlLCJwbiI6ImFkemVyazkxMjIyNDI4NyIsInVyIjoiaHR0cHM6Ly93d3cuYmx1ZXRvb3RoLmNvbS9kZXZlbG9wLXdpdGgtYmx1ZXRvb3RoL2RldmVsb3Blci1yZXNvdXJjZXMtdG9vbHMvZ2F0ZXdheT91dG1fc291cmNlPXN0YWNrb3ZlcmZsb3cmdXRtX21lZGl1bT1iYW5uZXImdXRtX2NvbnRlbnQ9Z2F0ZXdheWtpdDEmdXRtX2NhbXBhaWduPWRldmNhbXBhaWduZ2F0ZXdheWtpdCJ9&amp;s=LUTEr2wCKrwby8UmZiFs4uoZOQU" rel="nofollow" target="_blank" title=""><img src="./45dced89b87e42d48c66b22d96779cf3.jpg" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="39901982">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">6</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#">favorite</a>
+        <div class="favoritecount"><b></b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p><a href="https://developer.apple.com/reference/uikit/uiwebview#overview">Apple's recommendation</a>:</p>
+
+<blockquote>
+  <p>In apps that run in iOS 8 and later, use the WKWebView class instead of using UIWebView.</p>
+</blockquote>
+
+<p>Thus, I have replaced my good old <code>UIWebView</code> with a shiny new <code>WKWebView</code>. But what I thought to be an easy exercise (simply swapping the classes and replacing the delegate methods) turned out to be a real mess.</p>
+
+<h1>The Problem</h1>
+
+<p>When I load an HTML string using</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">loadHTMLString</span><span class="pun">(</span><span class="typ">String</span><span class="pun">,</span><span class="pln"> baseURL</span><span class="pun">:</span><span class="pln"> URL</span><span class="pun">?)</span></code></pre>
+
+<p>the web view loads and renders the pure HTML but <strong>it doesn't load any images or CSS files referenced inside the <code>htmlString</code></strong>.</p>
+
+<p>This happens <strong>only on a real device</strong>!<br>
+In Simultor all referenced resources are loaded correctly.</p>
+
+<p><a href="./2f84l.png"><img src="./2f84l.png" alt="Simulator"></a>
+<a href="./bDCwA.png"><img src="./bDCwA.png" alt="Real Device"></a></p>
+
+<h3><em>Example</em></h3>
+
+<p>I have defined a simple <code>htmlString</code> in my view controller class:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">let</span><span class="pln"> imageName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"image.png"</span><span class="pln">
+
+</span><span class="kwd">let</span><span class="pln"> libraryURL</span><span class="pun">:</span><span class="pln"> URL </span><span class="com">// The default Library URL</span><span class="pln">
+
+</span><span class="kwd">var</span><span class="pln"> htmlString</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="str">"&lt;html&gt; ... &lt;img src=\"\(imageName)\" /&gt; ... &lt;/html&gt;"</span><span class="pln">
+    </span><span class="com">// "..." represents more valid HTML code incl. header and body tags</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>The image is stored in the root Library folder so its URL is:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">let</span><span class="pln"> imageURL </span><span class="pun">=</span><span class="pln"> libraryURL</span><span class="pun">.</span><span class="pln">appendingPathComponent</span><span class="pun">(</span><span class="pln">imageName</span><span class="pun">)</span></code></pre>
+
+<p>Now I load the <code>htmlString</code> into the web view:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">webView</span><span class="pun">.</span><span class="pln">loadHTMLString</span><span class="pun">(</span><span class="pln">htmlString</span><span class="pun">,</span><span class="pln"> baseURL</span><span class="pun">:</span><span class="pln"> libraryURL</span><span class="pun">)</span></code></pre>
+
+<p>and it doesn't load the image even though the <code>baseURL</code> is set correctly.</p>
+
+<h1>Ideas for a Solution</h1>
+
+<ol>
+<li><p>Maybe <code>WKWebView</code> has a problem with resolving relative paths so my first idea was to use <strong>absolute paths</strong> inside the HTML string instead.<br>
+→ ❌ Doesn't work.</p></li>
+<li><p>Two answers to <a href="http://stackoverflow.com/questions/24882834/wkwebview-not-loading-local-files-under-ios-8">another SO post</a> suggested that using<br>
+<code>loadFileURL(URL, allowingReadAccessTo: URL)</code><br>
+instead of <code>loadHTMLString(...)</code> works in iOS 9+.<br>
+→ ✅ That works.</p></li>
+</ol>
+
+<p>However, I cannot use solution 2 because my HTML files are encrypted and the decrypted files must not be stored on the disk.</p>
+
+<h1>Question</h1>
+
+<p>Is there any way to load local resources like images and styles using the <code>WKWebView</code>'s</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">loadHTMLString</span><span class="pun">(</span><span class="typ">String</span><span class="pun">,</span><span class="pln"> baseURL</span><span class="pun">:</span><span class="pln"> URL</span><span class="pun">?)</span></code></pre>
+
+<p>function? Or is still a bug in iOS 9+?</p>
+
+<p><em>(I just cannot believe that Apple provides and recommends using a web view that cannot load any local web content from inside an HTML string?!)</em></p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/ios" class="post-tag js-gps-track" title="show questions tagged &#39;ios&#39;" rel="tag">ios</a> <a href="http://stackoverflow.com/questions/tagged/css" class="post-tag js-gps-track" title="show questions tagged &#39;css&#39;" rel="tag">css</a> <a href="http://stackoverflow.com/questions/tagged/swift" class="post-tag js-gps-track" title="show questions tagged &#39;swift&#39;" rel="tag">swift</a> <a href="http://stackoverflow.com/questions/tagged/image" class="post-tag js-gps-track" title="show questions tagged &#39;image&#39;" rel="tag">image</a> <a href="http://stackoverflow.com/questions/tagged/wkwebview" class="post-tag js-gps-track" title="show questions tagged &#39;wkwebview&#39;" rel="tag">wkwebview</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/39901982" title="short permalink to this question" class="short-link" id="link-post-39901982">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/39901982/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/39901982/revisions" title="show all edits to this post">edited <span title="2016-10-06 19:24:31Z" class="relativetime">Oct 6 at 19:24</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2016-10-06 17:12:34Z" class="relativetime">Oct 6 at 17:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2062785/mischa"><div class="gravatar-wrapper-32"><img src="./Z4s2Q.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2062785/mischa">Mischa</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,046</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+            <tr class="bounty-notification">
+            <td colspan="2">
+                
+<div class="question-status bounty">
+    <h2>
+This question has an open <a href="http://stackoverflow.com/help/bounty">bounty</a> worth     <span class="bounty-award">+50</span>
+ reputation from <a href="http://stackoverflow.com/users/2062785/mischa">Mischa</a> ending <b title="started at 2016-10-10 08:47:55Z
+ ending at 2016-10-17 08:47:55Z">in 58 minutes</b>.    </h2>
+<p>This question has not received enough attention.</p></div>
+
+            </td>
+        </tr>
+    
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-39901982" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-39901982" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								3 Answers
+                                <span style="display:none;" itemprop="answerCount">3</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="39902770"></a>
+<div id="answer-39902770" class="answer" data-answerid="39902770" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="39902770">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You can base64 encode the images... I know that works.  Not sure if it will be appropriate for your use case though.</p>
+
+<p>Kind of funny, I just ran into this problem while doing the opposite - moving from base64 encoded to image files.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/39902770" title="short permalink to this answer" class="short-link" id="link-post-39902770">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/39902770/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-10-06 18:01:17Z" class="relativetime">Oct 6 at 18:01</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1165843/moliveira"><div class="gravatar-wrapper-32"><img src="./3eaa402ef0b70f365a169abc5a4b70b6" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1165843/moliveira">moliveira</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">314</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-39902770" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-67093511" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Sounds like a smart work-around! Will try that. However, it really feels like dirty hacking in my case because I'll have to parse the HTML, find all image URLs, encode them as base64 data and replace the URL with the data.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2062785/mischa" title="2,046 reputation" class="comment-user owner">Mischa</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#comment67093511_39902770"><span title="2016-10-06 19:20:43Z" class="relativetime-clean">Oct 6 at 19:20</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-67093843" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">yea, I can see that.  In my case I already have the image that i want to get into the html so it was a bit cleaner.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1165843/moliveira" title="314 reputation" class="comment-user">moliveira</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#comment67093843_39902770"><span title="2016-10-06 19:31:22Z" class="relativetime-clean">Oct 6 at 19:31</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-39902770" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk453071335",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk453071335"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDM4LCJhdCI6NCwiYnQiOjAsImNtIjo0OTE0NTUsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNzI0MzU2LCJkaSI6ImIyZGY0MDEyNmFhYTQyNzM4YzE3ODFlMjJmZTQ1ODMzIiwiZG0iOjEsImZjIjoyMDQ3Mzg1LCJmbCI6MjQ3MzkyMywiaXAiOiIxODUuMTIxLjExNi4yIiwia3ciOiJpb3MsY3NzLHN3aWZ0LGltYWdlLHdrd2VidmlldyIsIm1rIjoiaW1hZ2UiLCJudyI6MjIsInBjIjozLjc1LCJlYyI6My43NSwicHIiOjc2NSwicnQiOjIsInN0Ijo4Mjc3LCJ1ayI6InVlMS0zZGQwNWMwNjk3Yjk0ZTBmYTg2MjQzMTcxY2FmODAxYiIsInpuIjo0NCwidHMiOjE0NzY2OTA1NTk4NjUsImJmIjp0cnVlLCJwbiI6ImFkemVyazQ1MzA3MTMzNSIsInVyIjoiaHR0cDovL3d3dy5hdGFsYXNvZnQuY29tL1Byb2R1Y3RzL0RvdEltYWdlP3V0bV9zb3VyY2U9c3RhY2t4Y2hnJnV0bV9tZWRpdW09YmFubmVyJnV0bV9jYW1wYWlnbj1zYXZ2eWRldmtpdCJ9&amp;s=O98hE-XhoOs8qroy6zprySDbvCo" rel="nofollow" target="_blank" title=""><img src="./87e640bf0d1d4cf5b5e5cc9180994c96.gif" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./i(1).gif"></div>
+  
+<a name="39985497"></a>
+<div id="answer-39985497" class="answer" data-answerid="39985497" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="39985497">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Personally, I had to switch to using <a href="https://github.com/XWebView/XWebView" rel="nofollow">XWebView</a> as the out-of-the-box behavior of WKWebView does not allow loading of local files.  XWebView tricks it by loading up a local web server in the background and directing local traffic thru it. (XWebView is based on top of WKWebView)</p>
+
+<p>Seems a bit overkill, but that is what I ended up having to do.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/39985497" title="short permalink to this answer" class="short-link" id="link-post-39985497">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/39985497/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2016-10-11 19:46:15Z" class="relativetime">Oct 11 at 19:46</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/9443/chris-brandsma"><div class="gravatar-wrapper-32"><img src="./0be19e8b6fec5e0d04a967acb54133cd" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/9443/chris-brandsma">Chris Brandsma</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">8,989</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span><span title="55 bronze badges"><span class="badge3"></span><span class="badgecount">55</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-39985497" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-67397247" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks for the adivce. I've read about this web server trick in other posts. But it really feels like a big overkill to use an external library to setup a local web server just to render some basic HTML - a task that's a webview's main purpose!</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2062785/mischa" title="2,046 reputation" class="comment-user owner">Mischa</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#comment67397247_39985497"><span title="2016-10-15 16:48:31Z" class="relativetime-clean">yesterday</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-39985497" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="39973751"></a>
+<div id="answer-39973751" class="answer" data-answerid="39973751" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="39973751">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Well you should be able to use local images and CSS files (and JavaScript files for that matter) with WKWebViews with the function that you have already found. My guess is that the problem is with your <code>baseURL</code> variable. I'd advise you to take two minutes and re-do your function call with this code that I have already used for another <a href="http://stackoverflow.com/questions/39336235/wkwebview-does-load-resources-from-local-document-folder/39459878#39459878">SO answer</a>:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">let</span><span class="pln"> baseURL </span><span class="pun">=</span><span class="pln"> URL</span><span class="pun">(</span><span class="kwd">string</span><span class="pun">:</span><span class="str">"file:///yourpath/yourfolder"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">let</span><span class="pln"> path </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Bundle</span><span class="pun">.</span><span class="pln">main</span><span class="pun">.</span><span class="pln">path</span><span class="pun">(</span><span class="pln">forResource</span><span class="pun">:</span><span class="pln"> </span><span class="str">"yourfolder/yourpage"</span><span class="pun">,</span><span class="pln"> ofType</span><span class="pun">:</span><span class="pln"> </span><span class="str">"html"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">do</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="kwd">let</span><span class="pln"> htmlString </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">try</span><span class="pln"> </span><span class="typ">NSString</span><span class="pun">(</span><span class="pln">contentsOfFile</span><span class="pun">:</span><span class="pln"> path</span><span class="pun">!,</span><span class="pln"> encoding</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">.</span><span class="typ">Encoding</span><span class="pun">.</span><span class="pln">utf8</span><span class="pun">.</span><span class="pln">rawValue</span><span class="pun">)</span><span class="pln">
+webView</span><span class="pun">.</span><span class="pln">loadHTMLString</span><span class="pun">(</span><span class="pln">htmlString </span><span class="kwd">as</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> baseURL</span><span class="pun">:</span><span class="pln"> baseURL</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">//error</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>If this doesn't work out, there is also <a href="http://stackoverflow.com/questions/34597159/loading-local-css-js-files-into-wkwebview">another SO thread</a>, which you can look into. Please let me know what happened once you try this out. It can definitely work but you have to find the right way. I have worked with WKWebViews extensively in the last few months and your biggest friend will be to have patience. Once you figure out the quirks, WKWebViews are quite alright. I secretly hoped for some new additions with iOS 10 but I guess I'll have to wait another year.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/39973751" title="short permalink to this answer" class="short-link" id="link-post-39973751">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/39973751/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-10-11 09:01:04Z" class="relativetime">Oct 11 at 9:01</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/6597361/tech4242"><div class="gravatar-wrapper-32"><img src="./WpFA1.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/6597361/tech4242">tech4242</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">575</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-39973751" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-67397074" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Have you tried that on a real device? Because this is pretty much what I have done. The <code>baseURL</code> is supposed to be the location from which your relative paths are resolved but the issue can't really be related to that because I've tried referencing absolute paths in the HTML as well and it doesn't work either.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2062785/mischa" title="2,046 reputation" class="comment-user owner">Mischa</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#comment67397074_39973751"><span title="2016-10-15 16:40:09Z" class="relativetime-clean">yesterday</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-67397134" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">(Btw: Once you figure out the quirks <i>everything</i> is quite alright. There shouldn't be any quirks in the first place!)</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2062785/mischa" title="2,046 reputation" class="comment-user owner">Mischa</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#comment67397134_39973751"><span title="2016-10-15 16:42:55Z" class="relativetime-clean">yesterday</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-39973751" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/39901982/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="39901982">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="96505634ad313a65ec7b9c19f35a51e4">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f39901982%2fwkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f39901982%2fwkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/ios" class="post-tag" title="show questions tagged &#39;ios&#39;" rel="tag">ios</a> <a href="http://stackoverflow.com/questions/tagged/css" class="post-tag" title="show questions tagged &#39;css&#39;" rel="tag">css</a> <a href="http://stackoverflow.com/questions/tagged/swift" class="post-tag" title="show questions tagged &#39;swift&#39;" rel="tag">swift</a> <a href="http://stackoverflow.com/questions/tagged/image" class="post-tag" title="show questions tagged &#39;image&#39;" rel="tag">image</a> <a href="http://stackoverflow.com/questions/tagged/wkwebview" class="post-tag" title="show questions tagged &#39;wkwebview&#39;" rel="tag">wkwebview</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2016-10-06 17:12:34Z"><b>10 days ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>111 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl?lastactivity" class="lastactivity-link" title="2016-10-11 19:46:15Z">5 days ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1150958002",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1150958002"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjo0NzE0OTMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNjM4OTk3LCJkaSI6IjFjYTQ0NTAyYjg1ZTQyOGE5YWVmZTA5ZGRmYjUxOTU5IiwiZG0iOjEsImZjIjoxOTQzNDUzLCJmbCI6MjE0MjMxMiwiaXAiOiIxODUuMTIxLjExNi4yIiwia3ciOiJpb3MsY3NzLHN3aWZ0LGltYWdlLHdrd2VidmlldyIsIm53IjoyMiwicGMiOjAsImVjIjowLCJwciI6MTYwNCwicnQiOjEsInN0Ijo4Mjc3LCJ1ayI6InVlMS0zZGQwNWMwNjk3Yjk0ZTBmYTg2MjQzMTcxY2FmODAxYiIsInpuIjo0NSwidHMiOjE0NzY2OTA1NTk4NjcsImJmIjp0cnVlLCJwbiI6ImFkemVyazExNTA5NTgwMDIiLCJ1ciI6Imh0dHA6Ly9zdGFja292ZXJmbG93LmNvbS9qb2JzP3V0bV9zb3VyY2U9d2Vic2l0ZSZ1dG1fbWVkaXVtPWJhbm5lciZ1dG1fY29udGVudD1tcHVfOCZ1dG1fY2FtcGFpZ249aG91c2VfYWRzX2hvdXNlX2Fkc19ST1NfU08ifQ&amp;s=FJVVLOUc4DCe7fKPMPEhWB0L_E0" rel="nofollow" target="_blank" title=""><img src="./b1bb3502c41a4ab7a2631803df9e0216.png" title="" alt="" border="0" width="300" height="250"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/39901982/wkwebview-fails-to-load-images-and-css-using-loadhtmlstring-baseurl#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./i(2).gif"></div>
+            <div id="hireme" class=" orange looking tagged clc-jobs-multi"><a href="http://stackoverflow.com/jobs" target="_blank" data-at="0" data-tz="1" data-ti="0" class="top "><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="225294" href="http://stackoverflow.com/jobs/125294/front-end-developer-join-us-in-building-the-best-vaimo" target="_blank" title="Front-End Developer: Join us in building the best in-class eCommerce solutions! at Vaimo. Click to learn more."><div class="title">Front-End Developer: Join us in building the best in-class eCommerce solutions!</div><div><span class="company">Vaimo</span><span class="location">Kyiv, Ukraine</span></div><div class="opts"><span class="salary">$18,000 - $36,000</span></div><span class="post-tag">css</span><span class="post-tag">html</span></a></div><a class="clc-dismiss clc-non-ad" data-clc-url="//clc.stackoverflow.com/dismiss-job" data-clcparam-cid="225294" data-clc-tooltip="dismiss this job"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="225295" href="http://stackoverflow.com/jobs/125295/back-end-developer-join-us-in-building-the-best-vaimo" target="_blank" title="Back-End Developer: Join us in building the best in-class eCommerce solutions! at Vaimo. Click to learn more."><div class="title">Back-End Developer: Join us in building the best in-class eCommerce solutions!</div><div><span class="company">Vaimo</span><span class="location">Kyiv, Ukraine</span></div><div class="opts"><span class="salary">$18,000 - $42,000</span></div><span class="post-tag">css</span><span class="post-tag">magento</span></a></div><a class="clc-dismiss clc-non-ad" data-clc-url="//clc.stackoverflow.com/dismiss-job" data-clcparam-cid="225295" data-clc-tooltip="dismiss this job"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul><div style="clear:both"></div></div><img class="impression" src="./soi.gif" style="display:none;"></div>
+        <script>
+;(function(n){var u=Object.assign||function(n){for(var i,r,u,f,e=[],t=1;t<arguments.length;t++)e[t-1]=arguments[t];for(i=0,r=e;i<r.length;i++){u=r[i];for(f in u)n[f]=u[f]}return n},r,t,f,i;try{if(typeof[].indexOf!="function")return;if(r=["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com"],r[0]!=="*"&&r.indexOf(location.hostname)===-1)return;t=window;f=t.clc_opts?u({},window.clc_opts):{};t.clc_opts=u(n,f);void 0;t.clc_opts.autoload&&(t.clc_init=t.clc_init||[],t.clc_init.push(function(){return t.clc.load()}));i=document.createElement("script");i.async=!0;void 0;i.src=t.clc_opts.lib;document.body.appendChild(i)}catch(e){void 0}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com"],"h":"clc.stackoverflow.com","u":"//clc.stackoverflow.com/p.js","lib":"//cdn.sstatic.net/clc/clc.min.js?v=6f49b407ccbc"});        </script>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/24882834?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">79</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/24882834/wkwebview-not-loading-local-files-under-ios-8?noredirect=1&amp;lq=1" class="question-hyperlink">WKWebView not loading local files under iOS 8</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/34597159?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">5</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/34597159/loading-local-css-js-files-into-wkwebview?noredirect=1&amp;lq=1" class="question-hyperlink">Loading local css &amp; js files into WKWebView</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/39336235?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">7</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/39336235/wkwebview-does-load-resources-from-local-document-folder?noredirect=1&amp;lq=1" class="question-hyperlink">WKWebView does load resources from local document folder</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/24882834?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">79</div></a><a href="http://stackoverflow.com/questions/24882834/wkwebview-not-loading-local-files-under-ios-8?rq=1" class="question-hyperlink">WKWebView not loading local files under iOS 8</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/27950072?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/27950072/how-to-check-wkwebview-has-html-string-loaded?rq=1" class="question-hyperlink">How to check WKWebView has HTML string loaded</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/30974921?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="http://stackoverflow.com/questions/30974921/wkwebview-iframe-content-is-not-loading-in-simulator-device?rq=1" class="question-hyperlink">WKWebView - iframe content is not loading in simulator/device</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/32399516?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">1</div></a><a href="http://stackoverflow.com/questions/32399516/strange-behavior-with-wkwebviews-loadhtmlstring-method-images-are-not-loading?rq=1" class="question-hyperlink">Strange behavior with WKWebView's loadHTMLString method. Images are not loading sometimes</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/33154208?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">-1</div></a><a href="http://stackoverflow.com/questions/33154208/wkwebview-does-not-load-images-from-raw-ip-addresses?rq=1" class="question-hyperlink">WkWebView does not load images from raw ip addresses</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/34791917?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="http://stackoverflow.com/questions/34791917/can-loadhtmlstring-load-image-asynchronously?rq=1" class="question-hyperlink">Can loadHTMLString load image asynchronously?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/35134194?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/35134194/wkwebview-not-loading-the-images-from-documents-directory-of-the-application-in?rq=1" class="question-hyperlink">WKWebView not loading the images from Documents directory of the application in iOS 9</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/35171841?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="http://stackoverflow.com/questions/35171841/ios-wkwebview-load-local-js-and-css?rq=1" class="question-hyperlink">iOS WKWebView load local js and css</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/36337017?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/36337017/local-images-doesnt-loads-with-wkwebview?rq=1" class="question-hyperlink">Local images doesn't loads with WKWebView</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="http://bicycles.stackexchange.com/questions/43236/putting-pins-back-into-chain" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:126 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Putting pin(s) back into chain
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1971903/anyone-understand-how-the-chain-rule-was-applied-here" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Anyone Understand how the chain rule was applied here?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/57989/is-there-any-job-that-cant-be-automated" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there any job that can't be automated?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-chemistry" title="Chemistry Stack Exchange"></div><a href="http://chemistry.stackexchange.com/questions/61040/what-are-oxidation-states-used-for" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:431 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are oxidation states used for?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/334399/how-to-draw-a-path-with-coordinates-defined-by-fx" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to draw a path with coordinates defined by f(x)
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/35513/is-it-illegal-for-regular-us-citizens-to-possess-or-read-documents-published-by" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it illegal for regular US citizens to possess or read documents published by Wikileaks?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-hinduism" title="Hinduism Stack Exchange"></div><a href="http://hinduism.stackexchange.com/questions/15476/is-this-shlokha-from-the-garuda-purana-if-so-which-chapter" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:567 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is this shlokha from the Garuda Purana? If so, which chapter?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1971660/how-to-use-the-binomial-theorem-to-calculate-binomials-with-a-negative-exponent" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to use the binomial theorem to calculate binomials with a negative exponent
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/286799/why-must-the-speed-of-light-be-the-universal-speed-limit-for-all-the-fundamental" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why must the speed of light be the universal speed limit for all the fundamental forces of nature?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/333487/developing-web-applications-for-long-lifespan-20-years" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Developing web applications for long lifespan (20+ years)
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-cooking" title="Seasoned Advice"></div><a href="http://cooking.stackexchange.com/questions/74777/how-much-is-a-ladleful" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:49 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How much is "a ladleful"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-cs" title="Computer Science Stack Exchange"></div><a href="http://cs.stackexchange.com/questions/64675/why-does-the-state-remain-unchanged-in-the-small-step-operational-semantics-of-a" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:419 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does the state remain unchanged in the small-step operational semantics of a while loop?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/44399/5008-out-of-the-box" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    5008 out of the box
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/143040/if-dumbledore-is-the-most-powerful-wizard-allegedly-why-would-he-work-at-a-gl" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If Dumbledore is the most powerful wizard (allegedly), why would he work at a glorified boarding school? Is there a role with more responsibility?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/71777/what-happens-if-one-brings-more-than-10-000-usd-with-them-in-the-us" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What happens if one brings more than 10,000 USD with them in the US?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-cs" title="Computer Science Stack Exchange"></div><a href="http://cs.stackexchange.com/questions/64699/are-the-words-expression-and-term-interchangeable-in-programming-language-th" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:419 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Are the words "expression" and "term" interchangeable in programming language theory?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="http://mechanics.stackexchange.com/questions/37463/can-cats-leave-scratch-marks-on-cars" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can cats leave scratch marks on cars?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/58737/how-would-a-planet-sized-computer-power-receive-power" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How would a planet-sized computer power receive power?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/61974/what-is-the-first-movie-to-show-this-hard-work-message-at-the-very-end" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the first movie to show this hard work message at the very end?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/78379/conference-presenting-stick-to-paper-material" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Conference presenting: stick to paper material?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/837558/where-are-sudos-insults-stored" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Where are sudo's insults stored?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-korean" title="Korean Language Stack Exchange"></div><a href="http://korean.stackexchange.com/questions/1990/is-there-a-korean-word-for-syllable-block" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:654 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a Korean word for 'Syllable Block'?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/58646/with-modern-technology-is-it-possible-to-permanently-stay-in-sunlight-without" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    With modern technology, is it possible to permanently stay in sunlight, without going into space?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stats" title="Cross Validated"></div><a href="http://stats.stackexchange.com/questions/240476/what-kind-of-distribution-is-this-covx-y-0-but-corrx-y-1" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:65 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What kind of distribution is this? cov(x,y)=0 but corr(x,y)=1
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/39901982" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/39901982/ivc/074c');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/39901982/ivc/074c" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+        </div>
+    </div><script async="" src="./clc.min.js"></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="4">
+                Technology
+            </th>
+            <th colspan="2">
+                Life / Arts
+            </th>
+            <th colspan="2">
+                Culture / Recreation
+            </th>
+            <th colspan="2">
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (18)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in logical reasoning">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.10.14.4091
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('ios,css,swift,image,wkwebview');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            
+            ga('create', 'UA-5620270-1');
+            ga('set', 'dimension2', '|ios|css|swift|image|wkwebview|');             ga('send', 'pageview');
+        
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+<script async="" src="./p.js"></script></body></html>

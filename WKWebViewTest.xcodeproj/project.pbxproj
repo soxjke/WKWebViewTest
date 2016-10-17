@@ -12,6 +12,38 @@
 		4B02401F1DB4BA6B007DA483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B02401D1DB4BA6B007DA483 /* Main.storyboard */; };
 		4B0240211DB4BA6B007DA483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240201DB4BA6B007DA483 /* Assets.xcassets */; };
 		4B0240241DB4BA6B007DA483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240221DB4BA6B007DA483 /* LaunchScreen.storyboard */; };
+		4B02404C1DB4BAF1007DA483 /* 0be19e8b6fec5e0d04a967acb54133cd in Resources */ = {isa = PBXBuildFile; fileRef = 4B02402C1DB4BAF1007DA483 /* 0be19e8b6fec5e0d04a967acb54133cd */; };
+		4B02404D1DB4BAF1007DA483 /* 2f84l.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B02402D1DB4BAF1007DA483 /* 2f84l.png */; };
+		4B02404E1DB4BAF1007DA483 /* 3eaa402ef0b70f365a169abc5a4b70b6 in Resources */ = {isa = PBXBuildFile; fileRef = 4B02402E1DB4BAF1007DA483 /* 3eaa402ef0b70f365a169abc5a4b70b6 */; };
+		4B02404F1DB4BAF1007DA483 /* 45dced89b87e42d48c66b22d96779cf3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B02402F1DB4BAF1007DA483 /* 45dced89b87e42d48c66b22d96779cf3.jpg */; };
+		4B0240501DB4BAF1007DA483 /* 87e640bf0d1d4cf5b5e5cc9180994c96.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240301DB4BAF1007DA483 /* 87e640bf0d1d4cf5b5e5cc9180994c96.gif */; };
+		4B0240511DB4BAF1007DA483 /* adFeedback.css in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240311DB4BAF1007DA483 /* adFeedback.css */; };
+		4B0240521DB4BAF1007DA483 /* adFeedback.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240321DB4BAF1007DA483 /* adFeedback.js */; };
+		4B0240531DB4BAF1007DA483 /* ados in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240331DB4BAF1007DA483 /* ados */; };
+		4B0240541DB4BAF1007DA483 /* ados.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240341DB4BAF1007DA483 /* ados.js */; };
+		4B0240551DB4BAF1007DA483 /* all.css in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240351DB4BAF1007DA483 /* all.css */; };
+		4B0240561DB4BAF1007DA483 /* analytics.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240361DB4BAF1007DA483 /* analytics.js */; };
+		4B0240571DB4BAF1007DA483 /* b1bb3502c41a4ab7a2631803df9e0216.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240371DB4BAF1007DA483 /* b1bb3502c41a4ab7a2631803df9e0216.png */; };
+		4B0240581DB4BAF1007DA483 /* bDCwA.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240381DB4BAF1007DA483 /* bDCwA.png */; };
+		4B0240591DB4BAF1007DA483 /* beacon.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240391DB4BAF1007DA483 /* beacon.js */; };
+		4B02405A1DB4BAF1007DA483 /* clc.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B02403A1DB4BAF1007DA483 /* clc.min.js */; };
+		4B02405B1DB4BAF1007DA483 /* external-editor.en.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B02403B1DB4BAF1007DA483 /* external-editor.en.js */; };
+		4B02405C1DB4BAF1007DA483 /* full-anon.en.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B02403C1DB4BAF1007DA483 /* full-anon.en.js */; };
+		4B02405D1DB4BAF1007DA483 /* i(1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 4B02403D1DB4BAF1007DA483 /* i(1).gif */; };
+		4B02405E1DB4BAF1007DA483 /* i(2).gif in Resources */ = {isa = PBXBuildFile; fileRef = 4B02403E1DB4BAF1007DA483 /* i(2).gif */; };
+		4B02405F1DB4BAF1007DA483 /* i.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4B02403F1DB4BAF1007DA483 /* i.gif */; };
+		4B0240601DB4BAF1007DA483 /* ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow.htm in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240401DB4BAF1007DA483 /* ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow.htm */; };
+		4B0240611DB4BAF1007DA483 /* jobs-multi.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240411DB4BAF1007DA483 /* jobs-multi.min.css */; };
+		4B0240621DB4BAF1007DA483 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240421DB4BAF1007DA483 /* jquery.min.js */; };
+		4B0240631DB4BAF1007DA483 /* p.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240431DB4BAF1007DA483 /* p.js */; };
+		4B0240641DB4BAF1007DA483 /* post-validation.en.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240441DB4BAF1007DA483 /* post-validation.en.js */; };
+		4B0240651DB4BAF1007DA483 /* prettify-full.en.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240451DB4BAF1007DA483 /* prettify-full.en.js */; };
+		4B0240661DB4BAF1007DA483 /* quant.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240461DB4BAF1007DA483 /* quant.js */; };
+		4B0240671DB4BAF1007DA483 /* snippet-javascript.en.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240471DB4BAF1007DA483 /* snippet-javascript.en.js */; };
+		4B0240681DB4BAF1007DA483 /* soi.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240481DB4BAF1007DA483 /* soi.gif */; };
+		4B0240691DB4BAF1007DA483 /* stub.en.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0240491DB4BAF1007DA483 /* stub.en.js */; };
+		4B02406A1DB4BAF1007DA483 /* WpFA1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B02404A1DB4BAF1007DA483 /* WpFA1.png */; };
+		4B02406B1DB4BAF1007DA483 /* Z4s2Q.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B02404B1DB4BAF1007DA483 /* Z4s2Q.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +54,38 @@
 		4B0240201DB4BA6B007DA483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0240231DB4BA6B007DA483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B0240251DB4BA6B007DA483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B02402C1DB4BAF1007DA483 /* 0be19e8b6fec5e0d04a967acb54133cd */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0be19e8b6fec5e0d04a967acb54133cd; sourceTree = "<group>"; };
+		4B02402D1DB4BAF1007DA483 /* 2f84l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2f84l.png; sourceTree = "<group>"; };
+		4B02402E1DB4BAF1007DA483 /* 3eaa402ef0b70f365a169abc5a4b70b6 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3eaa402ef0b70f365a169abc5a4b70b6; sourceTree = "<group>"; };
+		4B02402F1DB4BAF1007DA483 /* 45dced89b87e42d48c66b22d96779cf3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 45dced89b87e42d48c66b22d96779cf3.jpg; sourceTree = "<group>"; };
+		4B0240301DB4BAF1007DA483 /* 87e640bf0d1d4cf5b5e5cc9180994c96.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 87e640bf0d1d4cf5b5e5cc9180994c96.gif; sourceTree = "<group>"; };
+		4B0240311DB4BAF1007DA483 /* adFeedback.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = adFeedback.css; sourceTree = "<group>"; };
+		4B0240321DB4BAF1007DA483 /* adFeedback.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = adFeedback.js; sourceTree = "<group>"; };
+		4B0240331DB4BAF1007DA483 /* ados */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ados; sourceTree = "<group>"; };
+		4B0240341DB4BAF1007DA483 /* ados.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ados.js; sourceTree = "<group>"; };
+		4B0240351DB4BAF1007DA483 /* all.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = all.css; sourceTree = "<group>"; };
+		4B0240361DB4BAF1007DA483 /* analytics.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = analytics.js; sourceTree = "<group>"; };
+		4B0240371DB4BAF1007DA483 /* b1bb3502c41a4ab7a2631803df9e0216.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b1bb3502c41a4ab7a2631803df9e0216.png; sourceTree = "<group>"; };
+		4B0240381DB4BAF1007DA483 /* bDCwA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bDCwA.png; sourceTree = "<group>"; };
+		4B0240391DB4BAF1007DA483 /* beacon.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = beacon.js; sourceTree = "<group>"; };
+		4B02403A1DB4BAF1007DA483 /* clc.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = clc.min.js; sourceTree = "<group>"; };
+		4B02403B1DB4BAF1007DA483 /* external-editor.en.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "external-editor.en.js"; sourceTree = "<group>"; };
+		4B02403C1DB4BAF1007DA483 /* full-anon.en.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "full-anon.en.js"; sourceTree = "<group>"; };
+		4B02403D1DB4BAF1007DA483 /* i(1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "i(1).gif"; sourceTree = "<group>"; };
+		4B02403E1DB4BAF1007DA483 /* i(2).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "i(2).gif"; sourceTree = "<group>"; };
+		4B02403F1DB4BAF1007DA483 /* i.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = i.gif; sourceTree = "<group>"; };
+		4B0240401DB4BAF1007DA483 /* ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow.htm"; sourceTree = "<group>"; };
+		4B0240411DB4BAF1007DA483 /* jobs-multi.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jobs-multi.min.css"; sourceTree = "<group>"; };
+		4B0240421DB4BAF1007DA483 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
+		4B0240431DB4BAF1007DA483 /* p.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = p.js; sourceTree = "<group>"; };
+		4B0240441DB4BAF1007DA483 /* post-validation.en.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "post-validation.en.js"; sourceTree = "<group>"; };
+		4B0240451DB4BAF1007DA483 /* prettify-full.en.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "prettify-full.en.js"; sourceTree = "<group>"; };
+		4B0240461DB4BAF1007DA483 /* quant.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = quant.js; sourceTree = "<group>"; };
+		4B0240471DB4BAF1007DA483 /* snippet-javascript.en.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "snippet-javascript.en.js"; sourceTree = "<group>"; };
+		4B0240481DB4BAF1007DA483 /* soi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = soi.gif; sourceTree = "<group>"; };
+		4B0240491DB4BAF1007DA483 /* stub.en.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = stub.en.js; sourceTree = "<group>"; };
+		4B02404A1DB4BAF1007DA483 /* WpFA1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WpFA1.png; sourceTree = "<group>"; };
+		4B02404B1DB4BAF1007DA483 /* Z4s2Q.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Z4s2Q.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +118,7 @@
 		4B0240181DB4BA6B007DA483 /* WKWebViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				4B02402B1DB4BAF1007DA483 /* ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow_files */,
 				4B0240191DB4BA6B007DA483 /* AppDelegate.swift */,
 				4B02401B1DB4BA6B007DA483 /* ViewController.swift */,
 				4B02401D1DB4BA6B007DA483 /* Main.storyboard */,
@@ -62,6 +127,45 @@
 				4B0240251DB4BA6B007DA483 /* Info.plist */,
 			);
 			path = WKWebViewTest;
+			sourceTree = "<group>";
+		};
+		4B02402B1DB4BAF1007DA483 /* ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow_files */ = {
+			isa = PBXGroup;
+			children = (
+				4B02402C1DB4BAF1007DA483 /* 0be19e8b6fec5e0d04a967acb54133cd */,
+				4B02402D1DB4BAF1007DA483 /* 2f84l.png */,
+				4B02402E1DB4BAF1007DA483 /* 3eaa402ef0b70f365a169abc5a4b70b6 */,
+				4B02402F1DB4BAF1007DA483 /* 45dced89b87e42d48c66b22d96779cf3.jpg */,
+				4B0240301DB4BAF1007DA483 /* 87e640bf0d1d4cf5b5e5cc9180994c96.gif */,
+				4B0240311DB4BAF1007DA483 /* adFeedback.css */,
+				4B0240321DB4BAF1007DA483 /* adFeedback.js */,
+				4B0240331DB4BAF1007DA483 /* ados */,
+				4B0240341DB4BAF1007DA483 /* ados.js */,
+				4B0240351DB4BAF1007DA483 /* all.css */,
+				4B0240361DB4BAF1007DA483 /* analytics.js */,
+				4B0240371DB4BAF1007DA483 /* b1bb3502c41a4ab7a2631803df9e0216.png */,
+				4B0240381DB4BAF1007DA483 /* bDCwA.png */,
+				4B0240391DB4BAF1007DA483 /* beacon.js */,
+				4B02403A1DB4BAF1007DA483 /* clc.min.js */,
+				4B02403B1DB4BAF1007DA483 /* external-editor.en.js */,
+				4B02403C1DB4BAF1007DA483 /* full-anon.en.js */,
+				4B02403D1DB4BAF1007DA483 /* i(1).gif */,
+				4B02403E1DB4BAF1007DA483 /* i(2).gif */,
+				4B02403F1DB4BAF1007DA483 /* i.gif */,
+				4B0240401DB4BAF1007DA483 /* ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow.htm */,
+				4B0240411DB4BAF1007DA483 /* jobs-multi.min.css */,
+				4B0240421DB4BAF1007DA483 /* jquery.min.js */,
+				4B0240431DB4BAF1007DA483 /* p.js */,
+				4B0240441DB4BAF1007DA483 /* post-validation.en.js */,
+				4B0240451DB4BAF1007DA483 /* prettify-full.en.js */,
+				4B0240461DB4BAF1007DA483 /* quant.js */,
+				4B0240471DB4BAF1007DA483 /* snippet-javascript.en.js */,
+				4B0240481DB4BAF1007DA483 /* soi.gif */,
+				4B0240491DB4BAF1007DA483 /* stub.en.js */,
+				4B02404A1DB4BAF1007DA483 /* WpFA1.png */,
+				4B02404B1DB4BAF1007DA483 /* Z4s2Q.jpg */,
+			);
+			path = "ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow_files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +226,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0240521DB4BAF1007DA483 /* adFeedback.js in Resources */,
+				4B02404F1DB4BAF1007DA483 /* 45dced89b87e42d48c66b22d96779cf3.jpg in Resources */,
+				4B02404E1DB4BAF1007DA483 /* 3eaa402ef0b70f365a169abc5a4b70b6 in Resources */,
+				4B02405A1DB4BAF1007DA483 /* clc.min.js in Resources */,
+				4B02405F1DB4BAF1007DA483 /* i.gif in Resources */,
+				4B0240501DB4BAF1007DA483 /* 87e640bf0d1d4cf5b5e5cc9180994c96.gif in Resources */,
+				4B0240651DB4BAF1007DA483 /* prettify-full.en.js in Resources */,
+				4B02404C1DB4BAF1007DA483 /* 0be19e8b6fec5e0d04a967acb54133cd in Resources */,
+				4B0240511DB4BAF1007DA483 /* adFeedback.css in Resources */,
+				4B02405B1DB4BAF1007DA483 /* external-editor.en.js in Resources */,
+				4B0240671DB4BAF1007DA483 /* snippet-javascript.en.js in Resources */,
+				4B0240631DB4BAF1007DA483 /* p.js in Resources */,
+				4B02404D1DB4BAF1007DA483 /* 2f84l.png in Resources */,
+				4B0240531DB4BAF1007DA483 /* ados in Resources */,
+				4B0240601DB4BAF1007DA483 /* ios - WKWebView fails to load images and CSS using loadHTMLString(_, baseURL_) - Stack Overflow.htm in Resources */,
+				4B02405D1DB4BAF1007DA483 /* i(1).gif in Resources */,
 				4B0240241DB4BA6B007DA483 /* LaunchScreen.storyboard in Resources */,
+				4B0240541DB4BAF1007DA483 /* ados.js in Resources */,
+				4B0240591DB4BAF1007DA483 /* beacon.js in Resources */,
+				4B02406B1DB4BAF1007DA483 /* Z4s2Q.jpg in Resources */,
+				4B0240691DB4BAF1007DA483 /* stub.en.js in Resources */,
 				4B0240211DB4BA6B007DA483 /* Assets.xcassets in Resources */,
+				4B0240611DB4BAF1007DA483 /* jobs-multi.min.css in Resources */,
+				4B0240551DB4BAF1007DA483 /* all.css in Resources */,
+				4B0240681DB4BAF1007DA483 /* soi.gif in Resources */,
+				4B02405C1DB4BAF1007DA483 /* full-anon.en.js in Resources */,
+				4B02406A1DB4BAF1007DA483 /* WpFA1.png in Resources */,
 				4B02401F1DB4BA6B007DA483 /* Main.storyboard in Resources */,
+				4B02405E1DB4BAF1007DA483 /* i(2).gif in Resources */,
+				4B0240641DB4BAF1007DA483 /* post-validation.en.js in Resources */,
+				4B0240581DB4BAF1007DA483 /* bDCwA.png in Resources */,
+				4B0240661DB4BAF1007DA483 /* quant.js in Resources */,
+				4B0240561DB4BAF1007DA483 /* analytics.js in Resources */,
+				4B0240621DB4BAF1007DA483 /* jquery.min.js in Resources */,
+				4B0240571DB4BAF1007DA483 /* b1bb3502c41a4ab7a2631803df9e0216.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +385,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = WKWebViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WKWebViewTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +398,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = WKWebViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WKWebViewTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
